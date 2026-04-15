@@ -5,7 +5,8 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "scheme": "bancals",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -13,18 +14,39 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.antigravity.bancals",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Bancals necesita tu ubicación para trazar el perímetro de tus fincas y posicionar tus árboles con precisión.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Bancals necesita acceso a tu ubicación incluso en segundo plano para asegurar que el trazado de la finca no se interrumpa."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "package": "com.antigravity.bancals",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE"
+      ],
+      "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysPermission": "Permite que Bancals acceda a tu ubicación siempre para un mapeo ininterrumpido."
+        }
+      ],
+      "expo-secure-store"
+    ]
   }
 }

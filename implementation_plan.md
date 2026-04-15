@@ -7,7 +7,7 @@ Bancals es una app móvil profesional (Expo + React Native) para gestión agríc
 ## Puntos de revisión corregidos
 
 > [!IMPORTANT]
-> **Supabase**: Se utilizará el proyecto existente `castell` (ID: `fvldizxrknwnmotwmsck`). Las tablas `fincas` y `arboles` ya existen pero se ajustarán/migrarán al nuevo esquema si es necesario para Bancals.
+> **Supabase**: Se utilizará el proyecto desplegado en `https://sb.benicolo.com`. El proyecto anterior `castell` ha sido limpiado de las tablas de Bancals.
 
 > [!NOTE]
 > **Registro**: Se ha incluido el campo `username` en el proceso de registro para vincularlo al perfil del usuario.
